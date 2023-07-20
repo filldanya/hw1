@@ -10,11 +10,7 @@ int main() {
     ifstream in("in.txt");
     ofstream fout;
     fout.open("out.txt");
-    if (!in.is_open())
-    {
-        cout << "error";
-        return 0;
-    }
+
     std::string size_first;
     std::string size_second;
     in >> size_first;
@@ -52,4 +48,6 @@ int main() {
         }
         fout << arr[i] << ' ';
     }
+    delete[] arr;
+    delete[] arrr;
 }
